@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+  <head>
+    <title>GitHub users wiever</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js" data-semver="2.0.0" data-require="angularjs@*"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontello/fontello-a5ef5fa3/css/fontello.css" type="text/css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body class="text-center" ng-controller="FirstController">
+    <div class="container">
+
+    <div class="jumbotron"><h1>{{sitename}}</h1></div>
+
+  <div class="col-lg-12">
+    <div><strong>{{error}}</strong></div>
+    
+    <p class="user">User: {{username}}</p>
+    <form class="form-group" name="searchUser" ng-submit="search(username)">
+      <input class="form-control center-block" type="search" required placeholder="Username to find" ng-model="username" />
+      <input class="btn btn-primary" type="submit" value="Search">
+    </form>
+    
+    <p>Name: <strong>{{user.name}}</strong>      <br />
+
+      Location: {{user.location}}      <br />
+
+      Email {{user.email}},      <br />
+
+      Public repos: {{user.public_repos}}<br />
+      Account created {{user.created_at}},      <br />
+      Followers: {{user.followers}}      <br />
+      <img title="My github avatar" alt="Github avatar" ng-src="{{user.avatar_url}}" />
+    </p>
+  </div>
+
+  </div>
+
+  <footer class="navbar-fixed-bottom">
+    <div class="container foot">
+    GH users wiever 2015, made by <a href="http://www.tomasz.rudowi.cz/">Tomasz Rudowicz</a>, is OpenSource. Take code from my <a href="https://github.com/tomaaszq/unit-converter">GitHub<i class="icon-github"></i></a> 
+    </div>
+</footer>
+  </body>
+
+</html>
