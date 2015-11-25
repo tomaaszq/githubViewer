@@ -19,6 +19,6 @@ App.controller('FirstController', function($scope, $http)
           .then(onUserComplete, onError);
   };
   
-  $scope.sitename = "Welcome to GitHub users wiever!";
+  $scope.sitename = "Welcome to GitHub users viewer!";
   $scope.username = "angular";
 });
